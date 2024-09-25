@@ -1,0 +1,281 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+/* Section 002 : 명대사 폰트 */
+@import url('//fonts.googleapis.com/earlyaccess/jejumyeongjo.css');
+@import url(//fonts.googleapis.com/earlyaccess/kopubbatang.css);
+@font-face {
+  font-family: 'BookkMyungjo-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Rixfont/BookkMyungjo-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Section 002 : 우디, 포키 이름 태그 폰트 */
+@font-face {
+  font-family: 'SOYOMapleBoldTTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Section 005 : Gallery /  */
+@font-face {
+  font-family: 'EF_jejudoldam';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* color */
+  --black: #111;
+  --black2: #666;
+  --white: #fff;
+  --white1: #fafafa;
+  --white2: rgba(255, 255, 255, 0.9);
+
+  --title: #443832;
+  --red: #c91819;
+  --yellow: #f2dc6d;
+  --blue: #4e7cd9;
+  --blue2: #073ca8;
+  --blue3: #0a3e73;
+  --purple: #823ec2;
+
+  --bg-black: #0e0b12;
+
+  --line: #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--blue);
+  color: var(--white);
+}
+
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font: 1.6rem/1.6 'Poppins', 'Pretendard', sans-serif;
+  color: var(--black2);
+  word-break: keep-all;
+  letter-spacing: -0.05rem;
+}
+
+/* Header */
+#header {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+#header nav {
+  display: flex;
+  padding: 0.8rem 1.2rem;
+  /* border: 1px solid #000; */
+  border-radius: 5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+.gnb {
+  display: flex;
+  gap: 0.8rem;
+}
+.gnb li a {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 0.6rem 1.6rem;
+  /* border: 1px solid #000; */
+  font-weight: 600;
+  border-radius: 5rem;
+  color: var(--blue);
+  transition: 0.4s;
+
+  /* background: rgba(255, 255, 255, 0.2); */
+}
+.gnb li a::before {
+  content: '';
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--blue);
+  /* border: 1px solid #000; */
+  /* display: none; */
+  opacity: 1;
+  transition: 0.4s;
+}
+.gnb li:hover a {
+  background: var(--blue);
+  color: var(--white);
+}
+.gnb li:hover a::before {
+  background: var(--white);
+}
+
+/* Sec-title */
+.sec-title h2 {
+  font-family: 'Permanent Marker', cursive;
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #443832;
+  padding: 1.6rem 5.2rem;
+  position: relative;
+  border: 1px solid #000;
+  z-index: 3;
+}
+
+.sec-title h2::before,
+.sec-title h2::after {
+  content: '';
+  display: block;
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#footer {
+  background: #1f141c;
+  padding: 7rem 0;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+
+.top-con {
+  display: flex;
+  position: relative;
+  /* border: 1px solid #fff; */
+  width: 100%;
+}
+.top-con .foot-logo {
+  display: block;
+  width: 28rem;
+  height: 6rem;
+  background: #000 url(../src/foot-logo.svg) no-repeat 50%;
+  /* border: 1px solid #fff; */
+  margin: 0 auto;
+}
+.top-con .sns-wrap {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.top-con .sns-wrap li a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #eee no-repeat 50%;
+}
+.top-con .sns-wrap li:nth-child(1) a {
+  background-image: url(../src/ico-sns1.svg);
+}
+.top-con .sns-wrap li:nth-child(2) a {
+  background-image: url(../src/ico-sns2.svg);
+}
+.top-con .sns-wrap li:nth-child(3) a {
+  background-image: url(../src/ico-sns3.svg);
+}
+.top-con .sns-wrap li:nth-child(4) a {
+  background-image: url(../src/ico-sns4.svg);
+}
+
+.middle-con {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  gap: 3.2rem;
+}
+.middle-con strong {
+  color: #eee;
+  font-weight: 500;
+}
+
+.middle-con .credit-wrap ul,
+.middle-con .cast-wrap ul {
+  /* border: 1px solid #fff; */
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.middle-con .credit-wrap ul li,
+.middle-con .cast-wrap ul li {
+  /* border: 0.5px solid #fff; */
+}
+.middle-con .credit-wrap li {
+  display: flex;
+  font-size: 1.3rem;
+  flex: 1 1 40%;
+}
+.middle-con .cast-wrap li {
+  display: flex;
+  font-size: 1.3rem;
+  flex: 1 1 100%;
+}
+.middle-con .credit-wrap li p:first-of-type,
+.middle-con .cast-wrap li p:first-of-type {
+  width: 50%;
+  font-weight: 500;
+  /* background: rgba(255, 255, 255, 0.2); */
+}
+.middle-con .credit-wrap li p:last-of-type,
+.middle-con .cast-wrap li p:last-of-type {
+  font-weight: 200;
+}
+
+.bottom-con {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
